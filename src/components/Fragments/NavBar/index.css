@@ -1,0 +1,22 @@
+.burger-line {
+  @apply w-full h-[2px] bg-[#3A4C66] 
+    block rounded absolute;
+}
+
+.burger-menu-active > span:nth-child(1) {
+  @apply top-1/2 my-auto;
+}
+.burger-menu-active > span:nth-child(2) {
+  @apply scale-0 my-auto;
+}
+.burger-menu-active > span:nth-child(3) {
+  @apply bottom-1/2 my-auto;
+}
+
+.rotate-burger-line > span:nth-child(1) {
+  @apply rotate-45 -mt-[1px];
+}
+
+.rotate-burger-line > span:nth-child(3) {
+  @apply -rotate-45 -mb-[1px];
+}
