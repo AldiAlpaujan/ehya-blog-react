@@ -1,18 +1,36 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { NavItem as INavItem } from "../../../constants/nav-items";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { NavBarContext } from "../../../context/NavBarContext";
 
 const NavItem = (props: { item: INavItem }) => {
+    const navigate = useNavigate();
     const [showDropDown, setDropDown] = useState(false);
-
+    const { setShowMenu } = useContext(NavBarContext)!;
     const { name, type, items, href } = props.item;
+
     const isLink = type === 'link';
 
     const isLgDisplay = (): boolean => {
         const width = window.innerWidth;
         return width >= 1024;
+    }
+
+    const handleItemClick = () => {
+        if (window.innerWidth < 1024 && !isLink) {
+            setDropDown(!showDropDown)
+        } else {
+            if (window.innerWidth < 1024) {
+                setShowMenu(false);
+                setTimeout(() => {
+                    navigate(href ?? '');
+                }, 800);
+            } else {
+                navigate(href ?? '');
+            }
+        }
     }
 
     return (
@@ -24,9 +42,10 @@ const NavItem = (props: { item: INavItem }) => {
                     pl-2 pr-1 mr-0 lg:mr-9
                     group">
                 <Link
-                    onClick={() => { if (window.innerWidth < 1024) setDropDown(!showDropDown) }}
-                    to={href ?? ''} className={`font-semibold text-white text-sm
-                        ${showDropDown ? 'mb-4' : 'mb-6'}
+                    onClick={handleItemClick}
+                    to={''}
+                    className={`font-semibold text-white text-sm
+                        ${!isLink ? showDropDown ? 'mb-4' : 'mb-6' : 'mb-6'}
                         lg:text-base lg:mb-0 lg:text-dark-soft lg:z-10`} >
                     {name}
                     {!isLink && (<FontAwesomeIcon icon={faChevronDown} className="ml-2 mb-[2px] my-auto h-[10px] w-[10px]" />)}

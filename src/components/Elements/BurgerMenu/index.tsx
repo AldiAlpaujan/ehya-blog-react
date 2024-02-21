@@ -1,20 +1,23 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+import { NavBarContext } from '../../../context/NavBarContext';
 import '../../Fragments/NavBar/nav.css';
-import { useRef, useState } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 
 interface BurgerMenuProps {
     className: string,
-    onChanged: (value: boolean) => void
 }
 
 const BurgerMenu = (props: BurgerMenuProps) => {
-    const [isActive, setIsActive] = useState(true);
     const buttonRef = useRef<HTMLButtonElement>(null);
+    const { showMenu, setShowMenu } = useContext(NavBarContext)!;
 
     const handleOnClick = () => {
-        setIsActive(!isActive);
-        props.onChanged(isActive);
+        setShowMenu(!showMenu);
+    }
+
+    useEffect(() => {
         const value = buttonRef.current!;
-        if (isActive) {
+        if (showMenu) {
             value.classList.add('burger-menu-active');
             setTimeout(() => {
                 value.classList.add('rotate-burger-line');
@@ -25,7 +28,15 @@ const BurgerMenu = (props: BurgerMenuProps) => {
                 value.classList.remove('burger-menu-active');
             }, 400)
         }
-    }
+    }, [showMenu])
+
+    useEffect(() => {
+        if (showMenu) {
+            const value = buttonRef.current!;
+            value.classList.add('burger-menu-active');
+            value.classList.add('rotate-burger-line');
+        }
+    }, [])
 
     return (
         <button ref={buttonRef} onClick={handleOnClick} className={`${props.className} w-[24px] h-[23px] relative`} >

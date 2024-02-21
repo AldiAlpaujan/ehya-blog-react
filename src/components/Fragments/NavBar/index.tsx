@@ -1,12 +1,14 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import images from "../../../constants/images";
 import BurgerMenu from "../../Elements/BurgerMenu";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import NavigationItems from "./NavItems";
 import MobileNavigation from "./MobileNavigation";
+import { NavBarContext } from "../../../context/NavBarContext";
 
 const NavBar = () => {
-    const [showMenu, setShowMenu] = useState(false);
     const [navHeight, setNavHeight] = useState<string | null>(null);
+    const { showMenu } = useContext(NavBarContext)!;
 
     useEffect(() => {
         if (showMenu) {
@@ -24,15 +26,11 @@ const NavBar = () => {
                 xl:px-40 lg:py-6">
                 <img src={images.logo} alt="nav-img" />
                 <NavigationItems className="hidden lg:flex" />
-                <BurgerMenu className='lg:hidden' onChanged={(value) => { setShowMenu(value) }} />
+                <BurgerMenu className='lg:hidden' />
             </div>
             <MobileNavigation showMenu={showMenu} />
         </nav>
     );
 }
-
-
-
-
 
 export default NavBar;

@@ -1,22 +1,13 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import HomePage from './pages/home';
-import ArticlesPage from './pages/articles';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <HomePage />
-  },
-  {
-    path: '/articles',
-    element: <ArticlesPage />
-  },
-]);
+import { RouterProvider } from 'react-router-dom'
+import router from './route'
+import NavBarContextProvider from './context/NavBarContext';
 
 const App = () => {
   return (
     <div className="font-opensans">
-      <RouterProvider router={router} />
+      <NavBarContextProvider>
+        <RouterProvider router={router} />
+      </NavBarContextProvider>
     </div>
   );
 }

@@ -1,11 +1,9 @@
-import NavBar from "../components/Fragments/NavBar";
+import PageLayout from "../components/Layout/PageLayout";
 
 const ArticlesPage = () => {
     return (
-        <div>
-            <NavBar />
-            Article Page
-        </div>
+        <PageLayout>
+        </PageLayout>
     );
 }
 

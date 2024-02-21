@@ -1,10 +1,11 @@
 import PageLayout from "../components/Layout/PageLayout";
 
-const HomePage = () => {
+const LoginPage = () => {
     return (
         <PageLayout>
+            Hello World
         </PageLayout>
     );
 }
 
-export default HomePage;
+export default LoginPage;
