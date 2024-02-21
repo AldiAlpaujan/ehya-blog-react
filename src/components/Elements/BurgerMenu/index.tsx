@@ -1,11 +1,18 @@
-import './index.css';
+import '../../Fragments/NavBar/nav.css';
 import { useRef, useState } from 'react';
 
-const BurgerMenu = (props: { className: string }) => {
-    const [isActive, setIsActive] = useState(false);
+interface BurgerMenuProps {
+    className: string,
+    onChanged: (value: boolean) => void
+}
+
+const BurgerMenu = (props: BurgerMenuProps) => {
+    const [isActive, setIsActive] = useState(true);
     const buttonRef = useRef<HTMLButtonElement>(null);
+
     const handleOnClick = () => {
         setIsActive(!isActive);
+        props.onChanged(isActive);
         const value = buttonRef.current!;
         if (isActive) {
             value.classList.add('burger-menu-active');

@@ -1,32 +1,37 @@
 import images from "../../../constants/images";
-import BurgerMenu from "./BurgerMenu";
-import { NavItems } from "../../../constants/nav-items";
-import NavItem from "./NavItem";
-import Button from "../../Elements/Button";
+import BurgerMenu from "../../Elements/BurgerMenu";
+import { useEffect, useState } from "react";
+import NavigationItems from "./NavItems";
+import MobileNavigation from "./MobileNavigation";
 
 const NavBar = () => {
+    const [showMenu, setShowMenu] = useState(false);
+    const [navHeight, setNavHeight] = useState<string | null>(null);
+
+    useEffect(() => {
+        if (showMenu) {
+            setNavHeight('h-screen');
+        } else {
+            setTimeout(() => {
+                setNavHeight(null);
+            }, 800);
+        }
+    }, [showMenu]);
+
     return (
-        <nav>
-            <div className="container flex justify-between itemce w-full py-5 px-6
+        <nav className={`w-full ${navHeight} fixed flex flex-col bg-transparent `}>
+            <div className="container bg-white flex justify-between items-center w-full py-5 px-6
                 xl:px-40 lg:py-6">
                 <img src={images.logo} alt="nav-img" />
-                <div className="hidden lg:flex ">
-                    <ul className="flex items-center ">
-                        {
-                            NavItems.map((value, i) => (
-                                <NavItem key={i} item={value} />
-                            ))
-                        }
-                    </ul>
-                    <Button>
-                        Sign in
-                    </Button>
-                </div>
-                <BurgerMenu className='lg:hidden' />
+                <NavigationItems className="hidden lg:flex" />
+                <BurgerMenu className='lg:hidden' onChanged={(value) => { setShowMenu(value) }} />
             </div>
+            <MobileNavigation showMenu={showMenu} />
         </nav>
     );
 }
+
+
 
 
 
