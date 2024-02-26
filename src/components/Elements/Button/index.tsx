@@ -1,14 +1,17 @@
+
 import { childrenType } from "../../../utils/type";
 
 interface ButtonProps {
+    className?: string,
     children?: childrenType
     onClick?: () => void,
 }
-
 const Button = (props: ButtonProps) => {
     return (
-        <button onClick={props.onClick} className="py-2 px-8 border-2 border-blue-500 rounded-full
-            text-base font-semibold text-blue-500 transition-all duration-200 hover:bg-blue-500 hover:text-white">
+        <button onClick={props.onClick} className={`${props.className} w-full bg-primary 
+            text-lg font-semibold text-white py-[12px] rounded-md
+            transition-all duration-300
+            hover:opacity-85 active:opacity-100`}>
             {props.children}
         </button>
     );

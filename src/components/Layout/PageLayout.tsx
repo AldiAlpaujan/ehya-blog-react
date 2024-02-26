@@ -1,13 +1,11 @@
 import { childrenType } from "../../utils/type";
 import NavBar from "../Fragments/NavBar";
 
-const PageLayout = (props: { children?: childrenType }) => {
+const PageLayout = (props: { children?: childrenType, className?: string }) => {
     return (
         <div className="h-screen" >
             <NavBar />
-            <div className="pt-[68px] lg:pt-[90px]">
-                <div className="w-52 h-52 bg-blue-400">
-                </div>
+            <div className={`pt-16 lg:pt-[90px] ${props.className}`}>
                 {props.children}
             </div>
         </div>

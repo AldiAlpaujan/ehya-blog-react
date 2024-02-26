@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { NavItems } from "../../../constants/nav-items";
-import Button from "../../Elements/Button";
+import OutlineButton from "../../Elements/OutlineButton";
 import NavItem from "./NavItem";
 import { useContext } from "react";
 import { NavBarContext } from "../../../context/NavBarContext";
@@ -28,9 +28,9 @@ const NavigationItems = (props: { className?: string }) => {
                         <NavItem key={i} item={value} />
                     ))
                 }
-                <Button onClick={handleSignIn}>
+                <OutlineButton onClick={handleSignIn}>
                     Sign in
-                </Button>
+                </OutlineButton>
             </ul>
         </div>
     );
