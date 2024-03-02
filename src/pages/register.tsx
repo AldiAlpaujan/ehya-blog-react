@@ -21,11 +21,11 @@ const RegisterPage = () => {
                 label="Password"
                 placeholder="Enter password" />
 
-            <Button className="mb-5 mt-2 lg:mb-7">
+            <Button className="mb-5 mt-2 lg:mb-7 w-full ">
                 Register
             </Button>
 
-            <p className="self-start text-sm text-dark-light font-semibold">
+            <p className="self-start text-sm text-dark-light font-semibold ">
                 You have an account?
                 <span>
                     <Link to="/login" className="text-sm ml-1 text-primary font-semibold self-start mt-1 mb-5" >

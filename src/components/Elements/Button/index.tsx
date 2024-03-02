@@ -8,7 +8,7 @@ interface ButtonProps {
 }
 const Button = (props: ButtonProps) => {
     return (
-        <button onClick={props.onClick} className={`${props.className} w-full bg-primary 
+        <button onClick={props.onClick} className={`${props.className} px-5 bg-primary 
             text-lg font-semibold text-white py-[12px] rounded-md
             transition-all duration-300
             hover:opacity-85 active:opacity-100`}>

@@ -23,7 +23,6 @@ const NavBar = () => {
     return (
         <nav className={`w-full ${navHeight} fixed flex flex-col bg-transparent`}>
             <div className="container bg-white flex justify-between items-center w-full py-5 px-6
-                border-b
                 xl:px-40 lg:py-6">
                 <img src={images.logo} alt="nav-img" className="w-[78px] lg:w-[90px]" />
                 <NavigationItems className="hidden lg:flex" />

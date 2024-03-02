@@ -20,7 +20,7 @@ const LoginPage = () => {
                 Forgot Password?
             </a>
 
-            <Button className="mb-5 lg:mb-7">
+            <Button className="mb-5 lg:mb-7 w-full">
                 Sign In
             </Button>
 
