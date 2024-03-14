@@ -22,7 +22,7 @@ const ArticleSection = () => {
                     )
                 }
             </div>
-            <div className="w-full flex justify-center pt-12 pb-12">
+            <div className="w-full flex justify-center pt-12">
                 <OutlineButton className="rounded-lg py-3 px-6 border-[3px]">
                     <div className="flex items-center justify-center font-bold">
                         <p className="mr-3">More Articless</p>
@@ -35,6 +35,5 @@ const ArticleSection = () => {
         </SectionLayout>
     );
 }
-
 
 export default ArticleSection;

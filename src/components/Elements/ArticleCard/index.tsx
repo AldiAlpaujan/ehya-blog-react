@@ -14,12 +14,11 @@ const ArticleCard = (props: { article: Article }) => {
                     <img
                         src={article.image}
                         alt="article image"
-                        className="h-full object-cover transition-all duration-300 group-hover:scale-125" />
+                        className="w-full h-full object-cover transition-all duration-300 group-hover:scale-125" />
                 </div>
 
                 <div className="mx-5 mb-6">
-                    <h4 className="font-roboto font-bold text-dark-soft text-xl mb-3
-                        md:text-2xl" >
+                    <h4 className="font-roboto font-bold text-dark-soft text-xl mb-3 md:text-2xl" >
                         {article.title}
                     </h4>
                     <p className="text-base text-dark-light mb-6">
