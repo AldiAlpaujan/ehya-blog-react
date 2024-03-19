@@ -38,11 +38,11 @@ export  const NavItems: NavItem[] = [
     {
         name: 'Pricing',
         type: 'link',
-        href: '/'
+        href: '/pricing'
     },
     {
         name: 'FAQ',
         type: 'link',
-        href: '/'
+        href: '/faq'
     },
 ];

@@ -21,6 +21,12 @@ const router = createBrowserRouter([
         path: '/register',
         element: <RegisterPage />
     },
+    {
+        path: '/pricing',
+    },
+    {
+        path: '/faq',
+    },
 ]);
 
 export default router;

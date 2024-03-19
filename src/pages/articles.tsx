@@ -1,11 +1,10 @@
 import PageLayout from "../components/Layout/PageLayout";
+import ArticleSection from "../components/Section/Home/ArticleSection";
 
 const ArticlesPage = () => {
     return (
         <PageLayout>
-            <div className="container flex justify-center items-center h-40 bg-slate-200">
-                ARTICLE PAGE
-            </div>
+            <ArticleSection />
         </PageLayout>
     );
 }
