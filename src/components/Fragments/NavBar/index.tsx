@@ -24,7 +24,6 @@ const NavBar = () => {
 
     useEffect(() => {
         if (showMenu) {
-            // TODO: Fix this navbar
             setNavHeight('h-screen');
         } else {
             setTimeout(() => {
@@ -34,8 +33,8 @@ const NavBar = () => {
     }, [showMenu]);
 
     return (
-        <nav ref={navRef} className={`w-full ${navHeight} fixed flex flex-col transition-all duration-300 z-[9999]`}>
-            <div className="w-full bg-transparent">
+        <nav className={`w-full ${navHeight} fixed flex flex-col transition-all duration-300 z-[9999]`}>
+            <div ref={navRef} className="w-full">
                 <div className={`container flex justify-between items-center w-full py-5 px-6
                 xl:px-40 lg:py-6 bg-transparent`}>
                     <img src={images.logo} alt="nav-img" className="w-[78px] lg:w-[90px]" />

@@ -21,7 +21,7 @@ const CTASection = () => {
             </svg>
             <div className="w-full pb-10 bg-dark-hard my-0 flex justify-center">
                 <div className=" grid grid-cols-12 my-0 mx-5  text-white md:content-start md:px-16 lg:mx-10 lg:px-0 2xl:max-w-[1536px]">
-                    <div className="col-span-12 md:mb-[26px] lg:col-span-6 lg:pr-10 xl:ml-16 2xl:ml-36">
+                    <div className="col-span-12 md:mb-[26px] lg:col-span-6 lg:pr-10 xl:ml-16 2xl:ml-32">
                         <h4 className="font-roboto text-2xl font-bold pt-14 mb-10 md:text-center sm:text-3xl md:text-4xl md:mb-12 lg:text-start
                         lg:text-3xl xl:text-4xl">
                             Get our stories delivered From us to your inbox weekly.
