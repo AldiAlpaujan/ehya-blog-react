@@ -61,7 +61,7 @@ const Footer = () => {
         <div className=" w-full h-full bg-dark-hard">
             <SectionLayout className="text-white pt-6 pb-10 lg:pt-16">
                 <div className="grid grid-cols-12">
-                    <div className="col-span-12 order-last md:order-first md:col-span-4 lg:col-span-3">
+                    <div className="col-span-12 order-last md:order-first md:col-span-3">
                         <div className=" flex flex-col justify-center items-center text-center md:text-start md:items-start">
                             <img className="mb-4" src={whiteLogo} alt="" />
                             <p className="text-sm text-dark-light mb-5 md:text-base">
@@ -77,8 +77,8 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="md:col-span-1" />
-                    <div className="col-span-12 grid grid-cols-12 mb-3 md:col-span-8">
+                    <div className="md:col-span-2 lg:col-span-1" />
+                    <div className="col-span-12 grid grid-cols-12 mb-3 md:col-span-7">
                         {
                             menu.map((v, i) => (
                                 <div key={i} className={`mb-6 col-span-6 ${(i % 2 == 0) ? 'md:col-span-7' : 'md:col-span-5'} lg:col-span-3 3xl:col-span-4`}>

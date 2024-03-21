@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import SectionLayout from "../Layout/SectionLayout";
-import { ArticlessData } from "../../data/article-dummy-data";
+import { articlessData } from "../../data/article-dummy-data";
 import { useEffect, useState } from "react";
 import { Article } from "../../model/article";
 import ArticleCard from "../Elements/ArticleCard";
@@ -10,7 +10,7 @@ const ArticleSection = () => {
     const [articless, setArticless] = useState<Article[]>([]);
 
     useEffect(() => {
-        setArticless(ArticlessData);
+        setArticless(articlessData);
     }, []);
 
     return (

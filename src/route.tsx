@@ -3,7 +3,7 @@ import HomePage from './pages/home/home';
 import ArticlesPage from './pages/article/articles';
 import LoginPage from './pages/auth/login';
 import RegisterPage from './pages/auth/register';
-import ArticleDetailPage from './pages/article/articles-detail';
+import ArticleDetailPage from './pages/article-detail/articles-detail';
 
 const router = createBrowserRouter([
     {
