@@ -1,6 +1,6 @@
-import Button from "../../Elements/Button";
+import Button from "../../../components/Elements/Button";
 import images from "../../../constants/images";
-import SectionLayout from "../../Layout/SectionLayout";
+import SectionLayout from "../../../components/Layout/SectionLayout";
 
 const HeroSection = () => {
     return (

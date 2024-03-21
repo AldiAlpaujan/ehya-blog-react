@@ -1,4 +1,4 @@
-import Button from "../../Elements/Button";
+import Button from "../../../components/Elements/Button";
 import CTAImage from '../../../assets/CtaImage.jpg';
 
 const CTASection = () => {

@@ -3,6 +3,7 @@ import { Article } from "../model/article";
 
 export const ArticlessData: Article[] = [
     {
+        id: 1,
         image: images.art1,
         title: "Future of Work",
         subtitle: "Majority of peole will work in jobs that don't exist today.",
@@ -14,6 +15,7 @@ export const ArticlessData: Article[] = [
         }
     },
     {
+        id: 2,
         image: images.art2,
         title: "Why Use External It Support",
         subtitle: "Thanks to never-ending piles of data & the amount of insight.",
@@ -25,6 +27,7 @@ export const ArticlessData: Article[] = [
         }
     },
     {
+        id: 3,
         image: images.art3,
         title: "Future of Learning",
         subtitle: "A constant ability to learn will be on the most crucial skills.",
@@ -36,6 +39,7 @@ export const ArticlessData: Article[] = [
         }
     },
     {
+        id: 4,
         image: images.art4,
         title: "Help Finding Information Online",
         subtitle: "Majority of peole will work in jobs that don't exist today.",
@@ -47,6 +51,7 @@ export const ArticlessData: Article[] = [
         }
     },
     {
+        id: 5,
         image: images.art5,
         title: "How Does An Lcd Screen Work",
         subtitle: "Thanks to never-ending piles of data & the amount of insight.",
@@ -58,6 +63,7 @@ export const ArticlessData: Article[] = [
         }
     },
     {
+        id: 6,
         image: images.art6,
         title: "Headset No Longer Wired For Sound",
         subtitle: "A constant ability to learn will be on the most crucial skills.",
@@ -69,6 +75,7 @@ export const ArticlessData: Article[] = [
         }
     },
     {
+        id: 7,
         image: images.art7,
         title: "Choosing The Best Photo Printer",
         subtitle: "Majority of peole will work in jobs that don't exist today.",
@@ -80,6 +87,7 @@ export const ArticlessData: Article[] = [
         }
     },
     {
+        id: 8,
         image: images.art8,
         title: "A Discount Toner",
         subtitle: "Thanks to never-ending piles of data & the amount of insight.",

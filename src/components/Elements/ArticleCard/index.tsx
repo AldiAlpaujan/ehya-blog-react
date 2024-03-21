@@ -1,32 +1,33 @@
+import { Link } from "react-router-dom";
 import { Article, AuthorArticle } from "../../../model/article";
 
 const ArticleCard = (props: { article: Article }) => {
     const { article } = props;
     const author = article.author;
     return (
-        // card
         <div className="w-full">
-            {/* box */}
-            <div className="rounded-lg align-top bg-white overflow-hidden border border-[#E5EAF4]
+            <Link to={`/blog/${article.id}`}>
+                <div className="rounded-lg align-top bg-white overflow-hidden border border-[#E5EAF4]
                 sm:border-none sm:shadow-[#0000000F_0px_9px_30px] hover:cursor-pointer group" >
 
-                <div className="mb-6 w-full h-[200px] overflow-hidden">
-                    <img
-                        src={article.image}
-                        alt="article image"
-                        className="w-full h-full object-cover transition-all duration-300 group-hover:scale-125" />
-                </div>
+                    <div className="mb-6 w-full h-[200px] overflow-hidden">
+                        <img
+                            src={article.image}
+                            alt="article image"
+                            className="w-full h-full object-cover transition-all duration-300 group-hover:scale-125" />
+                    </div>
 
-                <div className="mx-5 mb-6">
-                    <h4 className="font-roboto font-bold text-dark-soft text-xl mb-3 md:text-2xl" >
-                        {article.title}
-                    </h4>
-                    <p className="text-base text-dark-light mb-6">
-                        {article.subtitle}
-                    </p>
-                    <AuthorCard author={author} date={article.date} />
+                    <div className="mx-5 mb-6">
+                        <h4 className="font-roboto font-bold text-dark-soft text-xl mb-3 md:text-2xl" >
+                            {article.title}
+                        </h4>
+                        <p className="text-base text-dark-light mb-6">
+                            {article.subtitle}
+                        </p>
+                        <AuthorCard author={author} date={article.date} />
+                    </div>
                 </div>
-            </div>
+            </Link>
         </div>
     );
 }

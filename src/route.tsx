@@ -1,8 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom'
-import HomePage from './pages/home';
-import ArticlesPage from './pages/articles';
-import LoginPage from './pages/login';
-import RegisterPage from './pages/register';
+import HomePage from './pages/home/home';
+import ArticlesPage from './pages/article/articles';
+import LoginPage from './pages/auth/login';
+import RegisterPage from './pages/auth/register';
+import ArticleDetailPage from './pages/article/articles-detail';
 
 const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
     {
         path: '/faq',
     },
+    {
+        path: '/blog/:id',
+        element: <ArticleDetailPage />
+    }
 ]);
 
 export default router;

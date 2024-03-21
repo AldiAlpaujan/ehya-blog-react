@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import SectionLayout from "../../Layout/SectionLayout";
-import { ArticlessData } from "../../../data/article-dummy-data";
+import SectionLayout from "../Layout/SectionLayout";
+import { ArticlessData } from "../../data/article-dummy-data";
 import { useEffect, useState } from "react";
-import { Article } from "../../../model/article";
-import ArticleCard from "../../Elements/ArticleCard";
-import OutlineButton from "../../Elements/OutlineButton";
+import { Article } from "../../model/article";
+import ArticleCard from "../Elements/ArticleCard";
+import OutlineButton from "../Elements/OutlineButton";
 
 const ArticleSection = () => {
     const [articless, setArticless] = useState<Article[]>([]);

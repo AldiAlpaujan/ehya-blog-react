@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import AuthInput from "../components/Elements/AuthInput";
-import Button from "../components/Elements/Button";
-import AuthLayout from "../components/Layout/AuthLayout";
+import AuthInput from "../../components/Elements/AuthInput";
+import Button from "../../components/Elements/Button";
+import AuthLayout from "../../components/Layout/AuthLayout";
 
 const LoginPage = () => {
     return (
