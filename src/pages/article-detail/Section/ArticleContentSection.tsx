@@ -1,10 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect } from "react";
-import SectionLayout from "../../../components/Layout/SectionLayout";
 import { ArticleDetailContext } from "../../../context/ArticleDetailContext";
 import { articlessData } from "../../../data/article-dummy-data";
 
-const ArticleContentSection = (props: { id: number }) => {
+const ArticleContentSection = (props: { id: number, className?: string }) => {
     const { id } = props;
     const { setArticle } = useContext(ArticleDetailContext)!;
 
@@ -19,10 +18,10 @@ const ArticleContentSection = (props: { id: number }) => {
     }, []);
 
     return (
-        <SectionLayout className="pt-4">
+        <section className={`w-full pt-4 ${props.className}`}>
             <BreadCrumb />
             <HeaderContent />
-        </SectionLayout>
+        </section>
     );
 }
 

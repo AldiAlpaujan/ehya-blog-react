@@ -1,15 +1,14 @@
 import { useContext } from "react";
 import Button from "../../../components/Elements/Button";
-import SectionLayout from "../../../components/Layout/SectionLayout";
 import { ArticleDetailContext } from "../../../context/ArticleDetailContext";
 import CommentCard from "../../../components/Elements/CommentCard";
 
-const CommentSection = () => {
+const CommentSection = (props: { className?: string }) => {
     return (
-        <SectionLayout className="pt-10">
+        <section className={`w-full pt-10 ${props.className}`}>
             <CommentForm />
             <CommentList />
-        </SectionLayout>
+        </section>
     );
 }
 
