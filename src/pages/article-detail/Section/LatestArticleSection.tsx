@@ -63,7 +63,7 @@ const Card = (props: { article: Article }) => {
     return (
         <Link to={`/blog/${article.id}`}>
             <div className="w-full flex md:w-1/2 lg:w-full hover:cursor-pointer">
-                <div className="w-[58px] h-[58px] mr-4 rounded-xl overflow-auto bg-slate-600
+                <div className="w-[58px] h-[58px] mr-4 rounded-xl overflow-auto
                 md:w-20 md:h-20 md:wr-5">
                     <img
                         src={article.image}
