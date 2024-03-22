@@ -5,7 +5,7 @@ import CommentCard from "../../../components/Elements/CommentCard";
 
 const CommentSection = (props: { className?: string }) => {
     return (
-        <section className={`w-full pt-10 ${props.className}`}>
+        <section className={`w-full pt-10 lg:pb-[100px] ${props.className}`}>
             <CommentForm />
             <CommentList />
         </section>

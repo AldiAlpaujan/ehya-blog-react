@@ -10,6 +10,10 @@ import art7 from '../assets/article/7.jpg'
 import art8 from '../assets/article/8.jpg'
 import art9 from '../assets/article/9.jpg'
 
+import user1 from '../assets/user/1.jpeg'
+import user2 from '../assets/user/2.jpeg'
+import user3 from '../assets/user/3.jpeg'
+import user4 from '../assets/user/4.jpeg'
 
 
 const images = {
@@ -24,6 +28,10 @@ const images = {
     art7,
     art8,
     art9,
+    user1,
+    user2,
+    user3,
+    user4,
 }
 
 export default images;
