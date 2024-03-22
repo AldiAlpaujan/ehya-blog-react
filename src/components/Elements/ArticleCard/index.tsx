@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Article, Author } from "../../../model/article";
+import { Article } from "../../../model/article";
+import { User } from "../../../model/user";
 
 const ArticleCard = (props: { article: Article }) => {
     const { article } = props;
@@ -32,7 +33,7 @@ const ArticleCard = (props: { article: Article }) => {
     );
 }
 
-const AuthorCard = (props: { author: Author, date: string }) => {
+const AuthorCard = (props: { author: User, date: string }) => {
     const { author, date } = props;
     return (
         <div className="flex items-center justify-between">
